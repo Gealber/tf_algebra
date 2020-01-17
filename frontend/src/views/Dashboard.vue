@@ -5,11 +5,10 @@
 </template>
 
 <script>
-    import QuestionsList from "../components/QuestionsList";
-    import Rank from "../components/Rank";
+    import QuestionsList from "../components/QuestionsList";    
     export default {
         name: "Dashboard",
-        components: {QuestionsList, Rank},
+        components: {QuestionsList},
     }
 </script>
 
