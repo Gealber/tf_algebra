@@ -1,0 +1,62 @@
+true---Es posible la suma entre dos matrices de orden 2x3---Matrices
+false---Es posible la multiplicación entre una matriz de orden 5x6 y otra de 7x6---Matrices
+true---El determinante de [[1,2],[0,-2]] es -2---Matrices
+true---Las matriz [[1,2],[0,-2]] es inversible---Matrices
+true---Toda matriz con dos filas proporcionales tienen determinante nulo---Matrices
+false---La siguiente identidad se cumple para todas las matrices tr(AB)=tr(A)tr(B)---Matrices
+true---El rango de una matriz es el número máximo de filas o columnas liealmente independiente---Matrices
+true---Las transfomaciones elementales no afectan el rango de las matrices---Matrices
+false---Toda matriz singular es inversible---Matrices
+true---Sea A y B dos matrices de orden 4x4 entonces se cumple que det(A*B)=det(A)*det(B)---Matrices
+false---Sea A una matriz de orden 2x3 y B una matriz de orden 3x3 entonces se cumple que det(A*B)=det(A)*det(B)---Matrices
+true---Sean A y B matrices de orden MxP y MxQ respectivamente si las filas de A son li entonces las filas de (A,B) son li---Matrices
+false---El determinante de una matriz cuadrada A que contenga dos filas idénticas es igual a 1---Matrices
+false---Si det(A)=0 entonces las filas de A son li---Matrices
+false---Para toda A se cumple que det(tr(A))=-det(A)---Matrices
+true---El método de la inversa solo puede ser aplicado a SEL compatibles determinados---Sistema de ecuaciones
+false---El método de Gauss no puede ser aplicado a matrices singulares---Sistema de ecuaciones
+false---La regla de Cramer es un método para determinar la linealidad de un sistema de vectores---Sistema de ecuaciones
+false---Es posible aplicar el método de Cramer en un SEL compatible indeterminado---Sistema de ecuaciones
+false---Es posible aplicar el método de la Inversa en un SEL homogeneo que posee más de una solución---Sistema de ecuaciones
+false---Los SEL homogeneos tienen al menos una solución---Sistema de ecuaciones
+true---Un sistema compatible indeterminado puede tener el mismo número de ecuaciones e incógnitas---Sistema de ecuaciones
+false---Un sistema compatible determinado puede tener más incógnitas que ecuaciones---Sistema de ecuaciones
+true---Un sistema compatible determinado puede tener más ecuaciones que incógnitas---Sistema de ecuaciones
+true---Si el rango de la matriz del sistema y el rango de la matriz ampliada son iguales el SEL es compatible---Sistema de ecuaciones
+false---Si el número de incógnitas de un SEL es mayor que el rango de la matriz del SEL entonces el SEL es compatible indeterminado---Sistema de ecuaciones
+true---El conjunto de vectores (x,y) de R2 con y=-3x es un espacio vectorial---Espacios vectoriales
+true---La norma de (1,-1,2,-5,1,-2) es 6---Espacios vectoriales 
+false---El sistema de vectores {(1,1),(1,-1)} es ortonormal---Espacios vectoriales
+true---El sistema de vectores {(1,0,-1),(0,0,0),(-2,6,2)} es ortogonal---Espacios vectoriales
+true---El resultado del producto vectorial entre dos vectores es un vector ortogonal a los dos vectores---Espacios vectoriales
+true---El conjunto formado por las matrices de orden 2x2 es un espacio vectorial---Espacios vectoriales
+true---El conjunto formado por los polinomios de grado menor o igual que 3 es un espacio vectorial---Espacios vectoriales
+false---El conjunto formado por los polinomios de grado igual a 3 es un espacio vectorial---Espacios vectoriales
+false---El conjunto {(1,1),(1,-1)} es ortonormal---Espacios vectoriales
+false---El siguiente subconjunto constituye un subespacio vectorial de R2 S={(a,b) de R2/ a-2b=1}---Espacios vectoriales
+true---El vector (-1,4,2,1) se puede expresar como combinación lineal del sistema de vectores A={(1,1,3,0),(0,4,2,0),(1,0,0,1),(0,1,1,2)}---Espacios vectoriales
+false---Si v1,v2,v3 son linealmente independientes(LI) entonces v1,v2,v3,v4 también son LI---Dependencia lineal
+true---Si v1,v2,v3 son linealmente dependientes entonces v1,v2,v3,v4 tambien son LD---Dependencia lineal
+true---Si a es una matriz de 3x3 y det(A)=0 entonces las filas de A son LD---Dependencia lineal
+true---(3,5) está en el subespacio generado por {(1,1),(2,4)}---Base, subespacio generador y dimensión
+false---(1,2,3) está en el espacio generado por {(2,0,4),(-1,0,3)}---Base, subespacio generador y dimensión
+false---{1,x^2,x^3,...,x^10000} genera a P---Base, subespacio generador y dimensión
+true---Si {(1,2),(2,3)} genera a R2, entonces también genera a {(1,2),(2,3),(-2,-3)}---Base, subespacio generador y dimensión
+false---Cualesquiera tres vectores en R3 forman una base para R3---Base, subespacio generador y dimensión
+true---Cualesquiera tres vectores LI en R3 forman una base de R3---Base, subespacio generador y dimensión
+true---Sea S = {(x,y,z) de R3/ x-y=0} entonces Dim(S)=2---Base, subespacio generador y dimensión
+false---Sea S = {(x,y,z) de R3/ x-y=0 2x-2y=0} entonces Dim(S)=1---Base, subespacio generador y dimensión
+false---{(1,0,3),(1.5,0,4.5),(1,5,6)} constituye una base de R3---Base, subespacio generador y dimensión
+false---Una base de un espacio vectorial es única---Base, subespacio generador y dimensión
+true---Si T es una aplicación lineal entonces T(3X)=3T(x)---Aplicaciones lineales
+true---Si T es una aplicación lineal entonces T(x+y)=T(x)+T(y)---Aplicaciones lineales
+false---Si T es una aplicación lineal entonces T(x*y)=T(x)*T(y)---Aplicaciones lineales
+false---Si A es una matriz de 4x5, entonces T(x)=Ax es una aplicación de R4 en R5---Aplicaciones lineales
+true---Si A es una matriz de 4x5, entonces T(x)=Ax es una aplicación de R5 en R4---Aplicaciones lineales
+false---Si T es una aplicación lineal de V en W entonces la imágen de T es W---Aplicaciones lineales
+false---Si T:R2 en R2 es una aplicación lineal y T((0,0))=(0,0), entonces T es la transformación nula---Aplicaciones lineales
+false---Una aplicación lineal de RN en RM con n!=m puede ser biyectiva---Aplicaciones lineales
+false---Si dim(V)=5 y dim(W)=7, es posible encontrar un isomorfismo T de V en W---Aplicaciones lineales
+true---Si T es inyectiva entonces KerT={0}---Aplicaciones lineales
+false---Para cada aplicación lineal F:Rm -> Rn existe una única matriz de mxn con F(v)=Av, para cada v de Rm---Aplicaciones lineales
+true---Si T:Rn -> Rn es inyectiva, entonces tambiém es sobreyectiva---Aplicaciones lineales

@@ -1,0 +1,1 @@
+true---Si T es un estadígrafo suficiente, entonces el estimador máximo verosímil M_emv existe y es función del estadígrafo suficiente T---Estimación puntual
