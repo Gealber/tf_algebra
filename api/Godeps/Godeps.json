@@ -1,0 +1,57 @@
+{
+	"ImportPath": "tf_algebra/api",
+	"GoVersion": "go1.13",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/negroni",
+			"Comment": "v1.0.0-35-gf431679",
+			"Rev": "f4316798d5d3acd39eb6784301b19f27f471415f"
+		},
+		{
+			"ImportPath": "github.com/dgrijalva/jwt-go",
+			"Comment": "v3.2.0-10-g5e25c22",
+			"Rev": "5e25c22bd5d6de03265bbe5462dcd162f85046f6"
+		},
+		{
+			"ImportPath": "github.com/dgrijalva/jwt-go/request",
+			"Comment": "v3.2.0-10-g5e25c22",
+			"Rev": "5e25c22bd5d6de03265bbe5462dcd162f85046f6"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.7.3-15-g49c0148",
+			"Rev": "49c01487a141b49f8ffe06277f3dca3ee80a55fa"
+		},
+		{
+			"ImportPath": "github.com/unrolled/render",
+			"Comment": "v1.0.1",
+			"Rev": "7fc1b8f68b9beddc94385fd212c293caf729277a"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2016.08.01-8-ga6b53ec",
+			"Rev": "a6b53ec6cb22a3699387a57a161566f9402ee85b"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/bson",
+			"Comment": "r2016.08.01-8-ga6b53ec",
+			"Rev": "a6b53ec6cb22a3699387a57a161566f9402ee85b"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/json",
+			"Comment": "r2016.08.01-8-ga6b53ec",
+			"Rev": "a6b53ec6cb22a3699387a57a161566f9402ee85b"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/sasl",
+			"Comment": "r2016.08.01-8-ga6b53ec",
+			"Rev": "a6b53ec6cb22a3699387a57a161566f9402ee85b"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/scram",
+			"Comment": "r2016.08.01-8-ga6b53ec",
+			"Rev": "a6b53ec6cb22a3699387a57a161566f9402ee85b"
+		}
+	]
+}
