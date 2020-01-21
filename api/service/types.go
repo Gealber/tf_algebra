@@ -22,6 +22,7 @@ type User struct {
 	Performance [3]int        `json:"performance" bson:"performance"`
 	CreatedOn   time.Time     `json:"createdOn" bson:"createdOn"`
 	Role        string        `json:"role" bson:"role"`
+	Failed 		[]Question	   `json:"failed" bson:"failed"`
 }
 
 // Question contains the data format of a question

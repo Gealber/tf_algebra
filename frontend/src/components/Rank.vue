@@ -1,14 +1,31 @@
 <template>
   <v-container fluid>
-      Ranking
+    Ranking
     <v-card tile color="indigo lighten-5">
-      <v-col v-for="(user, i) in users" :key="i">
-        <!-- <v-divider v-if="i != 0" class="indigo darken-2"></v-divider> -->
-        <v-avatar color="indigo lighten-1" size="25">
-          {{i+1}}
-        </v-avatar>
-        {{user.nickname}}  {{user.score}}
-      </v-col>
+      <v-expansion-panels popout>
+        <v-expansion-panel v-for="(user, i) in users" :key="i" hide-actions>
+          <v-expansion-panel-header>
+            <v-row align="center" class="spacer" no-gutters>
+              <v-col cols="4" sm="2" md="1">
+                <v-avatar color="indigo lighten-1" size="25">{{i+1}}</v-avatar>
+              </v-col>
+              <v-col>{{user.nickname}} con {{user.score}} puntos falló todas estas preguntas</v-col>
+            </v-row>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <v-divider></v-divider>
+            <v-row v-for="(user, i) in users" :key="i">
+              <v-list-item v-for="(q,i) in user.failed" :key="i">
+                <v-list-item-content>
+                  <v-list-item-title>{{q.statement}}</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-row>
+            <v-icon v-if="user.sucks" :color="user.color">mdi-thumb-up</v-icon>
+            <v-icon v-else :color="user.color">mdi-thumb-down</v-icon>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
     </v-card>
   </v-container>
 </template>
@@ -19,7 +36,7 @@ import axios from "axios";
 export default {
   name: "Rank",
   data: () => ({
-    users: []
+    users: [],    
   }),
   methods: {
     usersList() {
@@ -30,6 +47,10 @@ export default {
           else if (a.score === b.score) return 0;
           else return -1;
         });
+      this.users.map(user => {
+        user.sucks = user.failed.length < 10
+        user.color = user.failed.length < 10 ? "blue" : "red"
+      });
       });
       // return this.users
     }

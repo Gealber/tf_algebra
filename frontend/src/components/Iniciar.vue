@@ -26,8 +26,8 @@
                 </v-col>
             </v-row>
             <v-row justify="center">
-                <v-btn rounded class="mr-4 indigo" @click="submit">Iniciar</v-btn>
-                <v-btn rounded class="red" @click="clear">Borrar</v-btn>
+                <v-btn rounded class="mr-4 indigo white--text" @click="submit">Iniciar</v-btn>
+                <v-btn rounded class="mr-4 red darken-1 white--text" @click="clear">Borrar</v-btn>
             </v-row>
             <!--            Alert pop up-->
         </form>

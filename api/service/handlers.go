@@ -10,8 +10,7 @@ import (
 	"gopkg.in/mgo.v2/bson"
 	"io/ioutil"
 	"log"
-	"net/http"	
-	"strconv"
+	"net/http"		
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -114,22 +113,24 @@ func usersHandler(w http.ResponseWriter, r *http.Request) {
 func updateUserHandler(w http.ResponseWriter, r *http.Request) {
 	repo := NewMongoRepository()
 
-	var data map[string]string
+	var data User
 	err := json.NewDecoder(r.Body).Decode(&data)
 	if err != nil {
 		panic(err)
 	}
 	selector := map[string]interface{}{
-		"nickname": data["nickname"],
+		"nickname": data.Nickname,
 	}
 
-	score, err := strconv.Atoi(data["score"])
+	score := data.Score
 	users, err := repo.FindAllUsers(selector)
 	users[0].Score = score
+	users[0].Failed = data.Failed
 	err = repo.UpdateUser(selector, users[0])
 	if err != nil {
 		repo.logger.Fatal("Error updating database")
 	}
+		
 
 	w.WriteHeader(http.StatusOK)
 }

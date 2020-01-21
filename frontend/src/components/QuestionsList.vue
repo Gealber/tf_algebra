@@ -54,6 +54,7 @@
                 "Aplicaciones lineales"
             ],
             result: 0,
+            failed: [],
             alert: false,
             hide: false,
         }),
@@ -82,15 +83,14 @@
                 };
                 if (this.questions.length > 0) {
                     this.result = this.questions.filter(question => question.selected.toString() === question.result).length;
+                    this.failed = this.questions.filter(question => question.selected.toString() !== question.result);
                     this.alert = true;
                     let data = {
                         nickname: localStorage.getItem('userAlias'),
-                        score: this.result.toString()
+                        score: this.result,
+                        failed: this.failed
                     };
                     axios.post(path, data, options)
-                    // .then(() => {
-                    //     this.$ro
-                    // })
                 }
             }
         },
