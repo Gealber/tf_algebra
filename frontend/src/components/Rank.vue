@@ -1,26 +1,27 @@
 <template>
   <v-container fluid>
-    Ranking
+    Posición
     <v-card tile color="indigo lighten-5">
-      <v-expansion-panels popout>
+      <v-expansion-panels accordion>
         <v-expansion-panel v-for="(user, i) in users" :key="i" hide-actions>
           <v-expansion-panel-header>
             <v-row align="center" class="spacer" no-gutters>
               <v-col cols="4" sm="2" md="1">
-                <v-avatar color="indigo lighten-1" size="25">{{i+1}}</v-avatar>
+                <v-avatar color="indigo lighten-1 white--text" size="25">{{i+1}}</v-avatar>
               </v-col>
-              <v-col>{{user.nickname}} con {{user.score}} puntos falló todas estas preguntas</v-col>
+              <v-col>{{user.nickname}} con {{user.score}} puntos falló las siguientes preguntas</v-col>
             </v-row>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-divider></v-divider>
-            <v-row v-for="(user, i) in users" :key="i">
-              <v-list-item v-for="(q,i) in user.failed" :key="i">
+            <v-divider class="light-blue darken-4"></v-divider>
+            <v-list-item v-for="(q,i) in user.failed" :key="i">
                 <v-list-item-content>
                   <v-list-item-title>{{q.statement}}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
-            </v-row>
+            <!-- <v-row v-for="(user, i) in users" :key="i">
+              
+            </v-row> -->
             <v-icon v-if="user.sucks" :color="user.color">mdi-thumb-up</v-icon>
             <v-icon v-else :color="user.color">mdi-thumb-down</v-icon>
           </v-expansion-panel-content>
